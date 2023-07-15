@@ -1,0 +1,80 @@
+:root {
+  --primary-white-color: #ffffff;
+  --primary-title-color: #303030;
+  --primary-text-color: #555555;
+  --primary-subtitle-color: #9da4bd;
+  --accent-color: #ff6c00;
+  --section-bg-color: #f7f7f7;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  background-color: var(--primary-white-color);
+  color: var(--primary-text-color);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+address {
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+button {
+  display: block;
+  cursor: pointer;
+  border-radius: 25px;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+/* button */
+.btn-booking {
+  padding: 12px 20px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  background-color: transparent;
+
+  border: 1px solid var(--accent-color);
+  transition: background-color 250ms linear;
+}
+.btn-booking.dark-bg {
+  color: var(--primary-white-color);
+}
+.btn-booking.light-bg {
+  color: var(--primary-title-color);
+}
+.btn-booking:hover,
+.btn-booking:focus {
+  background-color: var(--accent-color);
+}
