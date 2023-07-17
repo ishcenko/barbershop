@@ -6,6 +6,7 @@
   --accent-color: #ff6c00;
   --section-bg-color: #f7f7f7;
 }
+
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
@@ -15,35 +16,38 @@ body {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
 p {
   margin: 0;
 }
+
 ul,
 ol {
   margin: 0;
   padding-left: 0;
   list-style: none;
 }
+
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
+
 address {
   font-style: normal;
 }
+
 a {
   text-decoration: none;
   cursor: pointer;
 }
+
 button {
   display: block;
   cursor: pointer;
   border-radius: 25px;
 }
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -54,7 +58,8 @@ button {
   padding-top: 120px;
   padding-bottom: 120px;
 }
-/* button */
+
+/*========= button ======= */
 .btn-booking {
   padding: 12px 20px;
 
@@ -78,7 +83,8 @@ button {
 .btn-booking:focus {
   background-color: var(--accent-color);
 }
-/* subtitle */
+
+/* ========= subtitle ========== */
 .subtitle {
   display: flex;
   align-items: center;
@@ -88,7 +94,7 @@ button {
   font-size: 11px;
   line-height: 15px;
   text-transform: uppercase;
-  columns: var(--primary-subtitle-color);
+  color: var(--primary-subtitle-color);
 }
 .subtitle.dark {
   color: var(--primary-title-color);
@@ -104,7 +110,8 @@ button {
 .dark.subtitle::before {
   background-color: var(--primary-title-color);
 }
-/* tilte */
+
+/* ========== title ========= */
 .title {
   margin-bottom: 20px;
   font-family: "Raleway";
@@ -118,7 +125,8 @@ button {
 .title.light {
   color: var(--primary-white-color);
 }
-/* header */
+
+/* ============= header =================== */
 .page-header {
   position: absolute;
   width: 100%;
@@ -146,29 +154,37 @@ button {
   display: flex;
   align-items: center;
 }
+.site-nav-list .item:not(:last-child) {
+  margin-right: 30px;
+}
 .site-nav-list .link {
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.1em;
   color: var(--primary-white-color);
+
   transition: color 250ms linear;
 }
+
 .site-nav-list .link:hover,
 .site-nav-list .link:focus {
   color: var(--accent-color);
 }
+
 .header-address {
   display: flex;
   align-items: center;
 }
 .cell-number {
   margin-right: 43px;
+
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.1em;
   color: var(--primary-white-color);
+
   transition: color 250ms linear;
 }
 .cell-number:hover,
@@ -176,7 +192,8 @@ button {
   color: var(--accent-color);
 }
 
-/* hero */
+/* =============== hero =============== */
+
 .hero .container {
   display: flex;
 }
@@ -211,12 +228,14 @@ button {
   line-height: 15px;
   letter-spacing: 0.2em;
   color: var(--primary-title-color);
+
   transition: color 250ms linear;
 }
 .sm-list .link:hover,
 .sm-list .link:focus {
   color: var(--accent-color);
 }
+
 .hero-content {
   flex-grow: 1;
   padding-top: 272px;
@@ -242,13 +261,15 @@ button {
 }
 .hero-desc {
   width: 360px;
+
   font-style: normal;
   font-weight: 400;
   line-height: 1.67;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.02em;
   color: var(--primary-subtitle-color);
 }
-/* about */
+
+/* =================== about ==================== */
 .about-container {
   display: flex;
 }
@@ -273,7 +294,9 @@ button {
   line-height: 1.86;
   letter-spacing: 0.02em;
 }
-/* sersices */
+
+/* ==================== services ==================== */
+
 .services {
   background-color: #111319;
   background-image: linear-gradient(rgba(1, 1, 5, 0.7), rgba(10, 10, 15, 0.7)),
@@ -335,4 +358,273 @@ button {
 }
 .services .btn-booking {
   margin: 0 auto;
+}
+
+/* =================== benefits ================== */
+.benefits-container {
+  display: flex;
+  align-items: center;
+}
+.benefits-numbers,
+.benefits-content {
+  flex-basis: calc((100% - 30px) / 2);
+}
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 370px;
+}
+.benefits-list .item {
+  width: 170px;
+  height: 133px;
+  padding: 20px 24px;
+  background-color: var(--section-bg-color);
+}
+.benefits-list .item:nth-child(even) {
+  margin-top: 30px;
+}
+.benefits-list .num {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 57px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: var(--primary-title-color);
+}
+.benefits-list .num::after {
+  content: "+";
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--accent-color);
+}
+.benefits-list .text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  text-align: center;
+  color: var(--primary-title-color);
+}
+
+.benefits-content .title {
+  width: 430px;
+}
+.benefits-desc {
+  width: 500px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+}
+
+/* ================= barbers =================== */
+
+.team {
+  background-color: var(--section-bg-color);
+}
+.team .title {
+  margin-bottom: 44px;
+}
+.team-list {
+  display: flex;
+}
+.team-list .item {
+  width: 370px;
+}
+.team-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+.team-title {
+  margin-top: 30px;
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--primary-title-color);
+}
+.team-desc {
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+.team-sm-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sm-item:not(:last-child) {
+  margin-right: 10px;
+}
+.sm-link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  background-color: var(--primary-white-color);
+  border-radius: 50%;
+}
+.sm-icon {
+  fill: var(--primary-title-color);
+  transition: fill 250ms linear;
+}
+.sm-link:hover > .sm-icon,
+.sm-link:hover > .sm-icon {
+  fill: var(--accent-color);
+}
+
+/* ============== galery ==================== */
+.galery-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+.galery-list .item {
+  flex-basis: calc((100% - 120px) / 4);
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+/* ================== contacts ======================= */
+.contacts.section {
+  background-color: #191c26;
+  background-image: url(../images/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 50% 100%;
+}
+.contacts-container {
+  display: flex;
+}
+.left-side {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 50%;
+  padding-right: 15px;
+}
+.left-side .title {
+  margin-bottom: 44px;
+}
+.input-phone {
+  width: 270px;
+}
+.input-name {
+  width: 270px;
+  margin-right: 30px;
+}
+.input-message {
+  width: 100%;
+  height: 76px;
+  resize: none;
+  margin-top: 44px;
+  margin-bottom: 44px;
+}
+
+.input-name,
+.input-phone,
+.input-message {
+  color: var(--primary-white-color);
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--primary-subtitle-color);
+
+  transition: border-bottom 250ms linear;
+}
+.input-name:hover,
+.input-name:focus,
+.input-phone:hover,
+.input-phone:focus,
+.input-message:hover,
+.input-message:focus {
+  border-bottom: 1px solid var(--primary-white-color);
+}
+
+.input-name::placeholder,
+.input-phone::placeholder,
+.input-message::placeholder {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary-subtitle-color);
+}
+.left-side .btn-booking {
+  padding: 12px 62px;
+}
+
+.right-side {
+  width: 50%;
+  padding-left: 100px;
+}
+.right-side .title {
+  margin-bottom: 40px;
+}
+.address-map {
+  display: flex;
+  width: 230px;
+  margin-bottom: 20px;
+}
+.map-icon,
+.phone-icon,
+.mail-icon {
+  margin-right: 16px;
+  fill: var(--primary-subtitle-color);
+}
+.address-phone {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.address-mail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 70px;
+}
+.text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--primary-subtitle-color);
+}
+.address-map .text {
+  font-weight: 700;
+}
+.address-mail .text {
+  text-decoration: underline;
+}
+.subtitle-contacts {
+  margin-bottom: 20px;
+  color: var(--primary-white-color);
+}
+
+/* ================ footer ================== */
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+.copy {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.2em;
+  color: var(--primary-subtitle-color);
 }
